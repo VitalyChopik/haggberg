@@ -65,3 +65,20 @@ menuInit()
 /* Раскомментировать для использования */
 // togglePopupWindows()
 // =======================================================================================================
+
+const serviceBox = document.querySelectorAll('.services__box');
+
+function squareBlock(element) {
+  element.forEach(item => {
+    item.style.height = `${item.offsetWidth}px`;
+  });
+}
+
+if (document.documentElement.clientWidth >= 600) {
+  squareBlock(serviceBox);
+}
+window.addEventListener('resize', function (event) {
+  if (document.documentElement.clientWidth >= 600) {
+    squareBlock(serviceBox);
+  }
+}, true);

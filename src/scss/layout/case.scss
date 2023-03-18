@@ -1,11 +1,4 @@
 .case {
-  &__section {
-    padding-top: rem(80);
-  }
-
-  &__title {
-    margin-bottom: rem(35);
-  }
 
   &__block {
     margin: 0 rem(-15);
@@ -51,6 +44,7 @@
     position: absolute;
     z-index: -1;
     object-fit: cover;
+    object-position: center center;
   }
 
   &__box-text {

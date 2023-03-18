@@ -68,6 +68,16 @@
         font-size: rem(16);
         line-height: rem(19);
       }
+
+      &:hover {
+        letter-spacing: 0;
+        color: $yellowColor;
+      }
+
+      &:active {
+        color: $bronzeColor;
+        letter-spacing: 0;
+      }
     }
 
     @include media(767) {

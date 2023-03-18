@@ -1,0 +1,155 @@
+.case {
+  &__section {
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+
+    @include media(768) {
+      padding-top: rem(40);
+      padding-bottom: rem(40);
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(35);
+
+    @include media(768) {
+      margin-bottom: rem(40);
+    }
+  }
+}
+
+.services {
+  &__section {
+    padding: rem(100) 0;
+
+    @include media(768) {
+      padding: rem(40) 0;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    @include media(991) {
+      flex-direction: column;
+    }
+  }
+
+  &__block-text {
+    max-width: rem(483);
+
+    @include media(991) {
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__title {
+    font-weight: 300;
+    text-align: left;
+    margin-bottom: rem(20);
+
+    @include media(768) {}
+  }
+
+  &__text {
+    line-height: 140%;
+    letter-spacing: 0.02em;
+
+    @include media(768) {}
+  }
+
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: rem(586);
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 1px;
+
+    @include media(991) {
+      max-width: 100%;
+    }
+
+    @include media(600) {
+      flex-direction: column;
+    }
+  }
+
+  &__box {
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: rem(20);
+    justify-content: space-between;
+    background: $whiteColor;
+    border: 1px #505050 solid;
+    margin-right: -1px;
+    margin-bottom: -1px;
+
+    @include media(991) {
+      background: none;
+      border: none;
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+
+    @include media(600) {
+      width: 100%;
+      height: rem(293) !important;
+    }
+
+    &:hover {
+      background: none;
+      border: none;
+    }
+
+    &:hover .services__img {
+      left: 0 !important;
+      right: 0;
+      opacity: 1;
+    }
+
+    &:hover .services__box-name {
+      color: $whiteColor;
+    }
+
+    &:hover .services__box-more {
+      color: $whiteColor;
+    }
+  }
+
+  &__img {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    z-index: -1;
+    object-fit: cover;
+    object-position: center center;
+    transition: left 0.5s;
+
+    @include media(991) {
+      opacity: 1;
+      left: 0;
+    }
+  }
+
+  &__box-more,
+  &__box-name {
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    transition: all 1s;
+
+    @include media(991) {
+      color: $whiteColor;
+    }
+
+    @include media(600) {
+      font-size: 18px;
+    }
+  }
+}

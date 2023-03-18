@@ -20,5 +20,13 @@
     font-size: rem(16);
     line-height: 140%;
     letter-spacing: 0.02em;
+
+    &:hover {
+      color: $yellowColor;
+    }
+
+    &:active {
+      color: $bronzeColor;
+    }
   }
 }
