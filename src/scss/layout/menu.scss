@@ -1,0 +1,37 @@
+.menu__list {
+  display: flex;
+
+  @include media(991) {
+    flex-direction: column;
+    text-align: right;
+  }
+}
+
+.menu__item {
+  margin-left: rem(150);
+
+  @include media(991) {
+    margin-left: auto;
+    margin-bottom: rem(70);
+  }
+}
+
+.menu__link {
+  color: $lightColor;
+  font-weight: 500;
+  font-size: rem(16);
+  line-height: rem(19);
+  text-transform: uppercase;
+  transition: all 0.5s;
+
+  @include media(991) {
+    font-size: rem(24);
+    line-height: rem(28);
+  }
+
+  &:hover {
+    color: $yellowColor;
+    letter-spacing: 0.3em;
+    // transform: translateX(-0.3em);
+  }
+}

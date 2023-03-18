@@ -4,10 +4,14 @@
   width: 100%;
   color: $lightColor;
   padding: rem(30) 0;
+  position: sticky;
+  top: 0;
 
-  &.sticky {
-    // ..стили для липкого хедера
+  @include media(991) {
+    padding: rem(20) 0;
   }
+
+  &.sticky {}
 
   // .header__container
   &__container {
@@ -16,26 +20,10 @@
   }
 
   // logo
-  &__logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: $lightColor;
-  }
 
-  &__logo-brand {
-    font-weight: 700;
-    font-size: rem(24);
-    line-height: rem(29);
-    margin-bottom: rem(4);
-    color: $lightColor;
-  }
-
+  &__logo-brand,
   &__logo-tagline {
     color: $lightColor;
-    font-size: rem(12);
-    line-height: rem(14);
   }
 
   // menu
@@ -72,75 +60,14 @@
       display: none;
     }
 
-    // @include media(991) {
-
-    // }
+    @include media(991) {
+      display: flex;
+    }
 
     text-align: right;
-
-    .box-contact {
-      margin-bottom: rem(20);
-      display: flex;
-      flex-direction: column;
-    }
-
-    .title {
-      margin-bottom: rem(12);
-      color: #939191;
-      font-size: rem(16);
-      line-height: 140%;
-      letter-spacing: 0.02em;
-    }
-
-    .link {
-      color: $whiteColor;
-      font-size: rem(16);
-      line-height: 140%;
-      letter-spacing: 0.02em;
-    }
   }
 
-  .menu__list {
-    display: flex;
 
-    @include media(991) {
-      flex-direction: column;
-      text-align: right;
-    }
-  }
-
-  .menu__item {
-    margin-left: rem(150);
-
-    @include media(991) {
-      margin-left: auto;
-      margin-bottom: rem(70);
-    }
-
-    &:hover {
-      margin-left: calc(rem(150) - 0.3em);
-    }
-  }
-
-  .menu__link {
-    color: $lightColor;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    text-transform: uppercase;
-    transition: all 0.5s;
-
-    @include media(991) {
-      font-size: 24px;
-      line-height: 28px;
-    }
-
-    &:hover {
-      color: $yellowColor;
-      letter-spacing: 0.3em;
-      // transform: translateX(-0.3em);
-    }
-  }
 }
 
 // =====================================================================================================================
