@@ -34,4 +34,9 @@
     letter-spacing: 0.3em;
     // transform: translateX(-0.3em);
   }
+
+  &:active {
+    color: $bronzeColor;
+    letter-spacing: 0.3em;
+  }
 }

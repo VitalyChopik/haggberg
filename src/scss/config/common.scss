@@ -1,1 +1,13 @@
 // Заголовки, общие БЄМ блоки и проче...
+.page__title {
+  color: $grayColor;
+  font-weight: 500;
+  font-size: rem(52);
+  line-height: 122.2%;
+  text-align: center;
+  letter-spacing: 0.075em;
+
+  @include media(991) {
+    font-size: 28px;
+  }
+}
