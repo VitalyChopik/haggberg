@@ -1,29 +1,165 @@
 // =====================================================================================================================
 .header {
+  background: $grayColor;
   width: 100%;
+  color: $lightColor;
+  padding: rem(30) 0;
+
   &.sticky {
     // ..стили для липкого хедера
   }
+
   // .header__container
   &__container {
-    height: rem($headerHeight);
     display: flex;
     align-items: center;
   }
+
+  // logo
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: $lightColor;
+  }
+
+  &__logo-brand {
+    font-weight: 700;
+    font-size: rem(24);
+    line-height: rem(29);
+    margin-bottom: rem(4);
+    color: $lightColor;
+  }
+
+  &__logo-tagline {
+    color: $lightColor;
+    font-size: rem(12);
+    line-height: rem(14);
+  }
+
+  // menu
+  &__menu {
+    margin-left: auto;
+
+    @include media(991) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $grayColor;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      padding: rem(125) rem(20) rem(40);
+      justify-content: space-between;
+      z-index: -1;
+      transition: all 0.2s linear;
+      transform: translateX(100%);
+    }
+
+    .menu-open & {
+      @include media(991) {
+        transform: translateX(0);
+        z-index: 1;
+      }
+    }
+  }
+
+  &__menu-about {
+    @media(min-width: 992px) {
+      display: none;
+    }
+
+    // @include media(991) {
+
+    // }
+
+    text-align: right;
+
+    .box-contact {
+      margin-bottom: rem(20);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .title {
+      margin-bottom: rem(12);
+      color: #939191;
+      font-size: rem(16);
+      line-height: 140%;
+      letter-spacing: 0.02em;
+    }
+
+    .link {
+      color: $whiteColor;
+      font-size: rem(16);
+      line-height: 140%;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  .menu__list {
+    display: flex;
+
+    @include media(991) {
+      flex-direction: column;
+      text-align: right;
+    }
+  }
+
+  .menu__item {
+    margin-left: rem(150);
+
+    @include media(991) {
+      margin-left: auto;
+      margin-bottom: rem(70);
+    }
+
+    &:hover {
+      margin-left: calc(rem(150) - 0.3em);
+    }
+  }
+
+  .menu__link {
+    color: $lightColor;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    transition: all 0.5s;
+
+    @include media(991) {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    &:hover {
+      color: $yellowColor;
+      letter-spacing: 0.3em;
+      // transform: translateX(-0.3em);
+    }
+  }
 }
+
 // =====================================================================================================================
 
 // Burger
-/*
+
 .icon-menu {
   display: none;
-  @include media(767) {
+
+  @include media(991) {
     display: block;
     position: relative;
-    width: rem(30);
-    height: rem(18);
+    width: rem(26);
+    height: rem(19.5);
     cursor: pointer;
     z-index: 5;
+    margin-left: auto;
+    background: none;
+
     span,
     &::before,
     &::after {
@@ -32,31 +168,50 @@
       right: 0;
       position: absolute;
       width: 100%;
-      height: rem(2);
-      background-color: #000;
+      height: rem(3);
+      background-color: #E2E2E2;
     }
+
     &::before {
       top: 0;
     }
+
     &::after {
       bottom: 0;
+      width: rem(11.5);
     }
+
     span {
-      top: calc(50% - rem(1));
+      top: calc(50% - rem(1.5));
+
+      width: rem(19.5);
     }
+
     .menu-open & {
       span {
         width: 0;
+
+
       }
-      &::before {
-        top: calc(50% - rem(1));
-        transform: rotate(-45deg);
-      }
+
+      span,
+      &::before,
       &::after {
-        bottom: calc(50% - rem(1));
+        height: rem(4);
+
+      }
+
+      &::before {
+        top: calc(50% - rem(2));
+        transform: rotate(-45deg);
+        width: 100%;
+      }
+
+      &::after {
+        bottom: calc(50% - rem(2));
         transform: rotate(45deg);
+        width: 100%;
       }
     }
   }
 }
-*/

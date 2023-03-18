@@ -21,7 +21,7 @@ import {
 // import AOS from 'aos'
 
 /* Раскомментировать для использования */
-// import Swiper, { Navigation, Pagination } from 'swiper'
+import Swiper, { Navigation, Pagination } from 'swiper'
 
 // Включить/выключить FLS (Full Logging System) (в работе)
 window['FLS'] = location.hostname === 'localhost'
@@ -38,7 +38,7 @@ isWebp()
 // addLoadedClass();
 /* Модуль для работы с меню (Бургер) */
 /* Раскомментировать для использования */
-// menuInit()
+menuInit()
 
 /* Библиотека для анимаций ===============================================================================
  *  документация: https://michalsnik.github.io/aos
