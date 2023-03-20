@@ -66,7 +66,8 @@ menuInit()
 // togglePopupWindows()
 // =======================================================================================================
 
-const serviceBox = document.querySelectorAll('.services__box');
+const serviceBox = document.querySelectorAll('.services__box'),
+  projectPosts = document.querySelectorAll('.project__post');
 
 function squareBlock(element) {
   element.forEach(item => {
@@ -74,10 +75,19 @@ function squareBlock(element) {
   });
 }
 
+projectPosts.forEach((item, i) => {
+  const projectPostText = item.querySelector('.project__post-text'),
+    projectPostImage = item.querySelector('.project__post-image');
+  if (i % 2 == 0) {
+    projectPostText.style.order = 2;
+    projectPostImage.style.order = 1;
+  }
+});
+
 if (document.documentElement.clientWidth >= 600) {
   squareBlock(serviceBox);
 }
-window.addEventListener('resize', function (event) {
+window.addEventListener('resize', function () {
   if (document.documentElement.clientWidth >= 600) {
     squareBlock(serviceBox);
   }
