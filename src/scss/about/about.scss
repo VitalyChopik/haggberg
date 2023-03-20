@@ -1,0 +1,48 @@
+.about {
+
+  &__title {
+    margin-top: rem(80);
+    text-align: left;
+
+    @include media(991) {
+      margin: rem(40) 0 rem(24);
+    }
+  }
+
+  &__cta {
+    padding: 0;
+    margin: rem(80) 0;
+
+    @include media(991) {
+      padding: 0;
+      margin: rem(40) 0;
+
+    }
+  }
+
+  &__section {
+    padding-bottom: rem(20);
+
+    @include media(991) {
+      padding-bottom: 0;
+    }
+
+    &.page__content {
+      padding-top: rem(0);
+      margin-top: rem(80);
+
+      @include media(991) {
+        margin-top: rem(40);
+      }
+
+      p {
+        margin-top: 0;
+        margin-bottom: rem(80);
+
+        @include media(991) {
+          margin-bottom: rem(40);
+        }
+      }
+    }
+  }
+}

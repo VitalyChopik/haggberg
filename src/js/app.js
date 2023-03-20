@@ -21,7 +21,7 @@ import {
 // import AOS from 'aos'
 
 /* Раскомментировать для использования */
-import Swiper, { Navigation, Pagination } from 'swiper'
+import Swiper, { Navigation } from 'swiper'
 
 // Включить/выключить FLS (Full Logging System) (в работе)
 window['FLS'] = location.hostname === 'localhost'
@@ -67,8 +67,11 @@ menuInit()
 // =======================================================================================================
 
 const serviceBox = document.querySelectorAll('.services__box'),
-  projectPosts = document.querySelectorAll('.project__post');
-
+  projectPosts = document.querySelectorAll('.project__post'),
+  reviewsSlider = document.querySelector('.reviews__slider'),
+  tabImage = document.querySelectorAll('.service__tab-image'),
+  tabsList = document.querySelector('.service__tab-list'),
+  tabItem = tabsList.querySelectorAll('.service__tab-item');
 function squareBlock(element) {
   element.forEach(item => {
     item.style.height = `${item.offsetWidth}px`;
@@ -87,8 +90,42 @@ projectPosts.forEach((item, i) => {
 if (document.documentElement.clientWidth >= 600) {
   squareBlock(serviceBox);
 }
+squareBlock(tabImage);
 window.addEventListener('resize', function () {
   if (document.documentElement.clientWidth >= 600) {
     squareBlock(serviceBox);
+
   }
+  squareBlock(tabImage);
 }, true);
+
+if (reviewsSlider) {
+  const swiper = new Swiper(reviewsSlider, {
+    modules: [Navigation],
+    speed: 400,
+    centeredSlides: true,
+    slidesPerView: 1,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+}
+
+tabItem.forEach(item => {
+  item.addEventListener('click', () => {
+    tabItem.forEach(e => {
+      e.classList.remove('active');
+    })
+    item.classList.add('active');
+    if (tabsList.classList.contains('active')) {
+      tabsList.classList.remove('active');
+    } else {
+      if (item.classList.contains('active')) {
+        tabsList.classList.add('active');
+      }
+    }
+
+  })
+});

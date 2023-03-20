@@ -1,13 +1,100 @@
 // Заголовки, общие БЄМ блоки и проче...
-.page__title {
-  color: $grayColor;
-  font-weight: 500;
-  font-size: rem(52);
-  line-height: 122.2%;
-  text-align: center;
-  letter-spacing: 0.075em;
+.page {
+  &__title {
+    color: $grayColor;
+    font-weight: 500;
+    font-size: rem(52);
+    line-height: 122.2%;
+    text-align: center;
+    letter-spacing: 0.075em;
 
-  @include media(991) {
-    font-size: 28px;
+    @include media(991) {
+      font-size: 28px;
+    }
+  }
+
+  &__content {
+    h1 {}
+
+    h2 {
+      color: $grayColor;
+      font-weight: 500;
+      font-size: rem(52);
+      line-height: 122.2%;
+      letter-spacing: 0.075em;
+      margin-bottom: rem(40);
+
+      @include media(991) {
+        font-size: 28px;
+        margin-bottom: rem(20);
+      }
+    }
+
+    h3 {}
+
+    h4 {}
+
+    h5 {}
+
+    h6 {}
+
+    p {
+      max-width: 790px;
+      font-weight: 500;
+      font-size: rem(20);
+      line-height: 140%;
+      color: #1F1F1F;
+      margin: rem(64) 0;
+
+      strong {
+        color: inherit;
+        font-weight: 700;
+        font-size: inherit;
+      }
+
+      a {
+        color: inherit;
+        font-size: inherit;
+        text-decoration: underline;
+      }
+
+      @include media(991) {
+        font-size: 16px;
+        margin: rem(40) 0;
+      }
+    }
+
+    ul {
+      list-style: disc;
+    }
+
+    ul,
+    ol {
+      margin: rem(40) 0;
+      padding-left: rem(20);
+
+    }
+
+    ol {
+      list-style: decimal;
+    }
+
+    li {
+      font-weight: 500;
+      font-size: rem(20);
+      line-height: 140%;
+      color: #1F1F1F;
+      margin-bottom: rem(20);
+      list-style: inherit;
+
+      @include media(991) {
+        font-size: rem(16);
+      }
+    }
+
+    img {
+      margin-bottom: rem(30);
+      max-width: 100%;
+    }
   }
 }
