@@ -54,6 +54,18 @@
         z-index: 1;
       }
     }
+
+    .menu__item {
+      position: relative;
+    }
+
+    .menu__link {
+      @media(min-width:992px) {
+        position: absolute;
+        white-space: nowrap;
+        right: 0;
+      }
+    }
   }
 
   &__menu-about {

@@ -40,11 +40,17 @@
 
     .active & {
       display: flex;
+      background: $grayColor;
+      color: #FFFFFF;
+
     }
 
     @include media(991) {
       width: 100%;
       display: none;
+      justify-content: space-between;
+      padding-left: rem(20);
+      padding-right: rem(20);
     }
 
     &.active {
@@ -53,6 +59,15 @@
 
       @include media(991) {
         display: flex;
+
+        &::after {
+          content: "";
+          border-bottom: 3.5px solid #ffffff;
+          border-right: 3.5px solid #ffffff;
+          height: 17px;
+          width: 17px;
+          transform: rotate(45deg) translate3d(-50%, 0%, 0);
+        }
       }
     }
   }

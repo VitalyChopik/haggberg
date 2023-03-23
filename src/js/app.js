@@ -21,8 +21,7 @@ import {
 // import AOS from 'aos'
 
 /* Раскомментировать для использования */
-import Swiper, { Navigation } from 'swiper'
-
+import Swiper, { Navigation, EffectFade } from 'swiper'
 // Включить/выключить FLS (Full Logging System) (в работе)
 window['FLS'] = location.hostname === 'localhost'
 
@@ -71,11 +70,21 @@ const serviceBox = document.querySelectorAll('.services__box'),
   reviewsSlider = document.querySelector('.reviews__slider'),
   tabImage = document.querySelectorAll('.service__tab-image'),
   tabsList = document.querySelector('.service__tab-list'),
-  tabItem = tabsList.querySelectorAll('.service__tab-item');
+  tabItem = document.querySelectorAll('.service__tab-item'),
+  navItem = document.querySelectorAll('.header__menu .menu__list .menu__item');
+
 function squareBlock(element) {
   element.forEach(item => {
     item.style.height = `${item.offsetWidth}px`;
   });
+}
+
+if (document.documentElement.clientWidth >= 992) {
+  navItem.forEach(item => {
+    const navLink = item.querySelector('a');
+    item.style.width = `${navLink.offsetWidth}px`;
+    item.style.height = `${navLink.offsetHeight}px`;
+  })
 }
 
 projectPosts.forEach((item, i) => {
@@ -102,30 +111,35 @@ window.addEventListener('resize', function () {
 if (reviewsSlider) {
   const swiper = new Swiper(reviewsSlider, {
     modules: [Navigation],
-    speed: 400,
+    speed: 1000,
     centeredSlides: true,
     slidesPerView: 1,
     loop: true,
+    // effect: 'fade',
+    // fadeEffect: {
+    //   crossFade: true,
+    // },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+
   });
 }
-
-tabItem.forEach(item => {
-  item.addEventListener('click', () => {
-    tabItem.forEach(e => {
-      e.classList.remove('active');
-    })
-    item.classList.add('active');
-    if (tabsList.classList.contains('active')) {
-      tabsList.classList.remove('active');
-    } else {
-      if (item.classList.contains('active')) {
-        tabsList.classList.add('active');
+if (tabItem) {
+  tabItem.forEach(item => {
+    item.addEventListener('click', () => {
+      tabItem.forEach(e => {
+        e.classList.remove('active');
+      })
+      item.classList.add('active');
+      if (tabsList.classList.contains('active')) {
+        tabsList.classList.remove('active');
+      } else {
+        if (item.classList.contains('active')) {
+          tabsList.classList.add('active');
+        }
       }
-    }
-
-  })
-});
+    })
+  });
+}
