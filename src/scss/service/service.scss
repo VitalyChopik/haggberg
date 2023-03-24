@@ -38,10 +38,15 @@
     transition: all 0.7s;
 
     .active & {
-      display: flex;
-      background: $grayColor;
-      color: #FFFFFF;
+      @include media(991) {
+        display: flex;
+        background: $grayColor;
+        color: #FFFFFF;
 
+        a {
+          color: #FFFFFF;
+        }
+      }
     }
 
     @include media(991) {
@@ -50,14 +55,19 @@
       justify-content: space-between;
       padding-left: rem(20);
       padding-right: rem(20);
+      order: 2;
     }
 
     &.active {
-      color: #FFFFFF;
+      a {
+        color: #FFFFFF;
+      }
+
       background: $grayColor;
 
       @include media(991) {
         display: flex;
+        order: 1;
 
         &::after {
           content: "";
