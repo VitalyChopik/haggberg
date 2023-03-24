@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include('html/head.html', {
-'title': 'About Us'
+'title': 'Contact'
 })
 
 <body>
@@ -9,7 +9,21 @@
     @@include('html/header.html', {})
     <main class="page">
       <div data-observ></div>
-
+      <div class="contact__section">
+        <div class="contact__container">
+          <h1 class="contact__title page__title">Contact</h1>
+          <div class="contact__info">
+            <div class="contact__info-box">
+              <div class="contact__info-title">Our phone number</div>
+              <a href="tel:0704418159" class="contact__info-link">0704418159</a>
+            </div>
+            <div class="contact__info-box">
+              <div class="contact__info-title">Our e-mail</div>
+              <a href="mailto:Joakim@haggbergkakel.com" class="contact__info-link">Joakim@haggbergkakel.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="cta__section contact__cta">
         <div class="cta__container">
           <div class="cta__block">
@@ -27,7 +41,19 @@
           </div>
         </div>
       </div>
-
+      <div class="contact__section form">
+        <div class="contact__container">
+          <h1 class="contact__form-title page__title">
+            Leave a request to start working together
+          </h1>
+          <div class="contact__form-block">
+            <input type="text" class="form__control" placeholder="Your name">
+            <input type="text" class="form__control" placeholder="Your email">
+            <input type="text" class="form__control" placeholder="Your message">
+            <input type="submit" class="form__submit" value="Send">
+          </div>
+        </div>
+      </div>
     </main>
     @@include('html/footer.html', {})
   </div>

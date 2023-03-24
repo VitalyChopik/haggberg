@@ -15,7 +15,6 @@
     }
   }
 
-  &__block {}
 
   &__tab-navigation {
     @include media(991) {
@@ -72,7 +71,6 @@
     }
   }
 
-  &__tab-contents {}
 
   &__tab-content {
     display: none;
