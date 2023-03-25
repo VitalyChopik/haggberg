@@ -10,7 +10,7 @@
   }
 
   &__cta {
-    padding: 0;
+    padding: 0 !important;
     margin: rem(80) 0;
 
     @include media(991) {

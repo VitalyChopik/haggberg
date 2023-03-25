@@ -6,7 +6,7 @@
   padding: rem(30) 0;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 100;
 
   @include media(991) {
     padding: rem(20) 0;
