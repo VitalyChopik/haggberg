@@ -4,9 +4,9 @@ require get_template_directory() . '/inc/menu.php';
 require get_template_directory() . '/inc/enqueue-scripts.php';
 require get_template_directory() . '/inc/acf-setting.php';
 require get_template_directory() . '/inc/ajax-script.php';
+require get_template_directory() . '/inc/register-acf-blocks.php';
 // require get_template_directory() . '/inc/clear-header.php';
 add_filter('show_admin_bar', '__return_false');
-
 //Поддержка SVG
 add_filter( 'upload_mimes', 'svg_upload_allow' );
 

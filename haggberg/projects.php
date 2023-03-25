@@ -8,22 +8,31 @@ get_header();
 <div class="project__section">
   <div class="project__container">
     <h1 class="page__title project__title"><?php the_title();?></h1>
-    <div class="project__block">
-      <article class="project__post">
-        <div class="project__post-text">
-          <h2 class="project__post-title">01. Modern Kitchen</h2>
-          <div class="project__post-data"><span class="project__post-area">12 sq.m.</span>
-            <div class="project__post-location"><img src="images/icons/location.svg" alt=""
-                class="project__post-icon"> <span class="project__post-city">STOCKHOLM</span></div>
+    <?php		
+        global $post;
+        $query = new WP_Query( [
+          'post_type' => 'post',
+          'posts_per_page' => 4,
+          'orderby' => 'date',
+          'order' => 'ASC'
+        ] );
+
+        if ( $query->have_posts() ) {
+          $projectNumber = 0;
+          ?>
+          <div class="project__block">
+            <?php
+            while ( $query->have_posts() ) {
+              $projectNumber++;
+              $query->the_post();
+              echo get_template_part( 'template-parts/project-case'); 
+            }
+            ?>
           </div>
-        </div><a href="single.html" class="project__post-image">
-          <picture>
-            <source srcset="images/project/project-1.webp" type="image/webp"><img
-              src="images/project/project-1.png" alt="" class="project__post-thumbnails">
-          </picture>
-        </a>
-      </article>
-    </div>
+          <?php
+        } 
+        wp_reset_postdata(); // Сбрасываем $post
+      ?>
   </div>
 </div>
 <?php get_footer();?>
