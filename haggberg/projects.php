@@ -12,7 +12,7 @@ get_header();
         global $post;
         $query = new WP_Query( [
           'post_type' => 'post',
-          'posts_per_page' => 4,
+          'posts_per_page' => -1,
           'orderby' => 'date',
           'order' => 'ASC'
         ] );

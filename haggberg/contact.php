@@ -24,10 +24,7 @@ get_header();
   <div class="contact__section form">
     <div class="contact__container">
       <h1 class="page__title contact__form-title"><?php the_field('title_form')?></h1>
-      <div class="contact__form-block">
-        <input type="text" class="form__control" placeholder="Your name"> <input
-          type="text" class="form__control" placeholder="Your email"> <input type="text" class="form__control"
-          placeholder="Your message"> <input type="submit" class="form__submit" value="Send"></div>
+      <?php echo do_shortcode('[contact-form-7 id="61" title="Contact form" html_class="contact__form-block"]')?>
     </div>
   </div>
 <?php get_footer();?>

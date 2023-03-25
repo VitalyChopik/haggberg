@@ -24,6 +24,9 @@
         width: calc(50% - 15px);
         flex-grow: 1;
         margin-bottom: 0;
+        height: auto;
+        object-fit: cover;
+        object-position: center center;
       }
     }
 
@@ -110,4 +113,19 @@
       max-width: 100%;
     }
   }
+}
+
+.wpcf7-spinner {
+  margin: 0 auto;
+  display: flex;
+  margin-top: -50px;
+  display: none;
+}
+
+.wpcf7-not-valid-tip {
+  display: none;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
+  margin: rem(50) auto 0;
 }
