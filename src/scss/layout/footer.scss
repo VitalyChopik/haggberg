@@ -24,11 +24,7 @@
 
   &__logo-brand,
   &__logo-tagline {
-    background: $logoGradient;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+    color: #E2E2E2;
   }
 
   &__brand {
@@ -88,13 +84,18 @@
   &__about {
     display: flex;
     justify-content: space-between;
+    gap: rem(40);
 
-    .box-contact {
-      margin-bottom: rem(40);
+    @include media(991) {
+      gap: rem(20);
     }
 
     .title {
       margin-bottom: rem(20);
+    }
+
+    .box-social {
+      margin-bottom: rem(40);
     }
   }
 

@@ -55,10 +55,9 @@
 
   &__post-data {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
 
-  &__post-area,
   &__post-city {
     font-weight: 500;
     font-size: rem(16);

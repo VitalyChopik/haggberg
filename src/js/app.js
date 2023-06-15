@@ -122,10 +122,6 @@ window.addEventListener('DOMContentLoaded', () => {
       centeredSlides: true,
       slidesPerView: 1,
       loop: true,
-      // effect: 'fade',
-      // fadeEffect: {
-      //   crossFade: true,
-      // },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -148,9 +144,6 @@ window.addEventListener('DOMContentLoaded', () => {
         const tabTargetStart = document.querySelector(`[data-tab-content=${tabTargetAttrStart}]`);
         removeClass(tabsContentBlock);
         tabTargetStart.classList.add('active');
-        console.log('работает2')
-      } else {
-        console.log('не работает')
       }
       item.addEventListener('click', () => {
         location.hash = item.getAttribute("data-tab-item")

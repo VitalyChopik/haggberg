@@ -8,11 +8,11 @@
 }
 
 .menu__item {
-  margin-left: rem(150);
+  margin-left: rem(80);
 
   @include media(991) {
     margin-left: auto;
-    margin-bottom: rem(70);
+    margin-bottom: rem(60);
   }
 }
 
