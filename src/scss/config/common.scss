@@ -1,1 +1,156 @@
 // Заголовки, общие БЄМ блоки и проче...
+.page {
+  &__title {
+    color: $grayColor;
+    font-weight: 500;
+    font-size: rem(52);
+    line-height: 122.2%;
+    text-align: center;
+    letter-spacing: 0.075em;
+
+    @include media(991) {
+      font-size: 28px;
+    }
+  }
+
+  &__content {
+    .block__img {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: rem(30);
+
+      img {
+        width: calc(50% - 15px);
+        flex-grow: 1;
+        margin-bottom: 0;
+        height: auto;
+        object-fit: cover;
+        object-position: center center;
+
+        @include media(991) {
+          width: 100%;
+        }
+      }
+    }
+
+    h1 {}
+
+    h2 {
+      color: $grayColor;
+      font-weight: 500;
+      font-size: rem(52);
+      line-height: 122.2%;
+      letter-spacing: 0.075em;
+      margin-bottom: rem(40);
+
+      @include media(991) {
+        font-size: 28px;
+        margin-bottom: rem(20);
+      }
+    }
+
+    h3 {}
+
+    h4 {}
+
+    h5 {}
+
+    h6 {}
+
+    p {
+      max-width: 790px;
+      font-weight: 500;
+      font-size: rem(20);
+      line-height: 140%;
+      color: #1F1F1F;
+      margin: rem(64) 0;
+
+      strong {
+        color: inherit;
+        font-weight: 700;
+        font-size: inherit;
+      }
+
+      a {
+        color: inherit;
+        font-size: inherit;
+        text-decoration: underline;
+      }
+
+      @include media(991) {
+        font-size: 16px;
+        margin: rem(40) 0;
+      }
+    }
+
+    ul {
+      list-style: disc;
+    }
+
+    ul,
+    ol {
+      margin: rem(40) 0;
+      padding-left: rem(20);
+
+    }
+
+    ol {
+      list-style: decimal;
+    }
+
+    li {
+      font-weight: 500;
+      font-size: rem(20);
+      line-height: 140%;
+      color: #1F1F1F;
+      margin-bottom: rem(20);
+      list-style: inherit;
+
+      @include media(991) {
+        font-size: rem(16);
+      }
+    }
+
+    img {
+      margin-bottom: rem(30);
+      max-width: 100%;
+    }
+  }
+}
+
+.wpcf7-spinner {
+  margin: 0 auto;
+  display: flex;
+  margin-top: -50px;
+  display: none;
+}
+
+.wpcf7-not-valid-tip {
+  display: none;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
+  margin: rem(50) auto 0;
+}
+
+@keyframes left-to-right {
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  from {
+    transform: translate3d(-100%, 0, 0);
+
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

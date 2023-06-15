@@ -1,0 +1,124 @@
+.project {
+  &__section {
+    padding: rem(80) 0 rem(100);
+
+    @include media(991) {
+      padding: rem(40) 0 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(90);
+
+    @include media(991) {
+      margin-bottom: rem(50);
+    }
+  }
+
+
+  &__post {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include media(991) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__post-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: rem(24);
+
+    @include media(991) {
+      width: 100%;
+      padding: rem(40) rem(20);
+      height: rem(195);
+      order: 1 !important;
+    }
+  }
+
+  &__post-title {
+    font-size: rem(40);
+    line-height: rem(46);
+    letter-spacing: 0.075em;
+    color: #1F1F1F;
+
+    @include media(991) {
+      font-size: rem(24);
+      line-height: rem(28);
+    }
+  }
+
+  &__post-data {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__post-city {
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: rem(19);
+    color: #1F1F1F;
+  }
+
+  &__post-location {
+    display: flex;
+  }
+
+  &__post-icon {
+    height: rem(15);
+    width: auto;
+    margin-right: rem(8);
+  }
+
+  &__post-image {
+    width: 50%;
+    position: relative;
+
+    &::after {
+      content: "LEARN MORE";
+      position: absolute;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: all 0.5s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: 0.075em;
+      color: #FFFFFF;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    @include media(991) {
+      width: 100%;
+      order: 2 !important;
+    }
+  }
+
+  &__post-thumbnails {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}

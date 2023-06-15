@@ -19,7 +19,7 @@
 * раскомментировать для использования 
 */
 // @import 'libs/aos';
-// @import 'libs/swiper';
+@import 'libs/swiper';
 
 // Подлючение кастомного скрола для всего сайта =======================================================================================================================
 @import 'config/scrollbar';
@@ -32,4 +32,16 @@
 
 // Подключение стилей отдельных блоков и секций =======================================================================================================================
 @import 'layout/header';
+@import 'layout/logo';
+@import 'layout/menu';
+@import 'layout/boxAbout';
 @import 'layout/footer';
+@import 'layout/case';
+@import 'homepage/homepage';
+@import 'project/project';
+@import 'single/single';
+@import 'about/about';
+@import 'layout/slider';
+@import 'service/service';
+@import 'layout/cta';
+@import 'contact/contact';

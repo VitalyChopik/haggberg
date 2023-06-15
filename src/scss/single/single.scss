@@ -1,0 +1,31 @@
+.single {
+  &__section {
+    padding-top: rem(80);
+
+    @include media(991) {
+      padding-top: rem(40);
+    }
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: rem(90);
+
+    @include media(991) {
+      margin-bottom: rem(50);
+    }
+  }
+
+  &__thumbnail {
+    width: 100%;
+    max-height: 370px;
+    object-fit: cover;
+    object-position: center center;
+
+    @include media(768) {
+      height: rem(200);
+    }
+  }
+
+  &__content {}
+}

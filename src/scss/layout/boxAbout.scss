@@ -1,0 +1,46 @@
+.box-about {
+  flex-direction: column;
+  gap: rem(20);
+
+  .box-contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    margin-bottom: rem(12);
+    color: #939191;
+    font-size: rem(16);
+    line-height: 140%;
+    letter-spacing: 0.02em;
+  }
+
+  .link {
+    color: $whiteColor;
+    font-size: rem(16);
+    line-height: 140%;
+    letter-spacing: 0.02em;
+
+    &:hover {
+      color: $yellowColor;
+    }
+
+    &:active {
+      color: $bronzeColor;
+    }
+  }
+
+  .box-social {
+    display: flex;
+    gap: rem(20);
+
+    .social__link {
+      max-width: rem(16);
+    }
+
+    .social__img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,155 @@
+.service {
+  &__section {
+    padding: rem(80) 0;
+
+    @include media(991) {
+      padding: rem(40) 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(80);
+
+    @include media(991) {
+      margin-bottom: rem(60);
+    }
+  }
+
+
+  &__tab-navigation {
+    @include media(991) {
+      margin-bottom: rem(60);
+    }
+  }
+
+  &__tab-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__tab-item {
+    width: 25%;
+    height: rem(80);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.7s;
+    flex-grow: 1;
+
+    .active & {
+      @include media(991) {
+        display: flex;
+        background: $grayColor;
+        color: #FFFFFF;
+
+        a {
+          color: #FFFFFF;
+        }
+      }
+    }
+
+    @include media(991) {
+      width: 100%;
+      display: none;
+      justify-content: space-between;
+      padding-left: rem(20);
+      padding-right: rem(20);
+      order: 2;
+    }
+
+    &.active {
+      a {
+        color: #FFFFFF;
+      }
+
+      background: $grayColor;
+
+      @include media(991) {
+        display: flex;
+        order: 1;
+
+        &::after {
+          content: "";
+          border-bottom: 3.5px solid #ffffff;
+          border-right: 3.5px solid #ffffff;
+          height: 17px;
+          width: 17px;
+          transform: rotate(45deg) translate3d(-50%, 0%, 0);
+          transition: all 0.3s;
+        }
+
+        .active & {
+          &::after {
+            transition: all 0.3s;
+            transform: rotate(-135deg) translate3d(25%, -25%, 0);
+          }
+        }
+      }
+    }
+  }
+
+
+  &__tab-content {
+    display: none;
+
+    &.active {
+      display: flex;
+      overflow: hidden;
+    }
+
+    @include media(991) {
+      flex-direction: column;
+    }
+  }
+
+  &__tab-image {
+    width: 50%;
+    transition: all 0.5s;
+    transform: translate3d(-100%, 0, 0);
+
+    .active & {
+      transition: all 0.5s;
+      transform: translate3d(0, 0, 0);
+      animation: left-to-right 1s linear;
+    }
+
+    @include media(991) {
+      order: 2;
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  &__tab-text {
+    width: 50%;
+    padding: rem(24);
+    transition: all 0.3s;
+    opacity: 0;
+
+    .active & {
+      transition: all 1s;
+      opacity: 1;
+      animation: opacity 1s linear;
+    }
+
+    @include media(991) {
+      order: 1;
+      width: 100%;
+      padding: 0;
+      margin-bottom: rem(24);
+    }
+
+    p {
+      line-height: 140%;
+      color: #1F1F1F;
+    }
+  }
+}
