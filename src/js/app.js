@@ -133,8 +133,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     });
   }
-  console.log(tabItem);
-  console.log(tabItem[0]);
   if (tabItem) {
     if (tabItem[0]) {
       tabItem[0].classList.add('active');

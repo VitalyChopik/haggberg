@@ -2,13 +2,17 @@
   <div class="case__section">
     <div class="case__container">
       <h1 class="page__title case__title"><?php the_title();?></h1>
+      <?php
+      $postIN = get_field('selected_portfolio');
+      ?>
       <?php		
         global $post;
         $query = new WP_Query( [
           'post_type' => 'post',
           'posts_per_page' => 4,
-          'orderby' => 'date',
-          'order' => 'ASC'
+          'orderby' => 'post__in',
+          'order' => 'ASC',
+          'post__in' => $postIN
         ] );
 
         if ( $query->have_posts() ) {
@@ -27,7 +31,6 @@
       ?>
     </div>
   </div>
-  
   <?php if( have_rows('service_block') ): ?>
     <?php while( have_rows('service_block') ): the_row(); ?>
     <div class="services__section">
@@ -43,7 +46,7 @@
             'post_type' => 'service',
             'posts_per_page' => 4,
             'orderby' => 'date',
-            'order' => 'ASC'
+            'order' => 'DESC',
           ] );
 
           if ( $query->have_posts() ) {

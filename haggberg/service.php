@@ -17,7 +17,8 @@ get_header();
               'post_type' => 'service',
               'posts_per_page' => -1,
               'orderby' => 'date',
-              'order' => 'ASC'
+              'order' => 'DESC',
+
             ] );
 
             if ( $query->have_posts() ) {
@@ -43,7 +44,7 @@ get_header();
               'post_type' => 'service',
               'posts_per_page' => -1,
               'orderby' => 'date',
-              'order' => 'ASC'
+              'order' => 'ASC',
             ] );
 
             if ( $query->have_posts() ) {
@@ -72,13 +73,17 @@ get_header();
 </div>
 <div class="case__section">
   <div class="case__container">
+  <?php
+    $postIN = get_field('selected_portfolio');
+  ?>
   <?php		
     global $post;
     $query = new WP_Query( [
       'post_type' => 'post',
       'posts_per_page' => 4,
-      'orderby' => 'date',
-      'order' => 'ASC'
+      'orderby' => 'post__in',
+      'order' => 'ASC',
+      'post__in' => $postIN
     ] );
 
     if ( $query->have_posts() ) {

@@ -3,7 +3,6 @@
   <div class="project__post-text">
     <h2 class="project__post-title"><?php if($projectNumber<10) { ?>0<?php echo $projectNumber; }else { echo $projectNumber; } ?>. <?php the_title();?></h2>
     <div class="project__post-data">
-      <span class="project__post-area"><?php the_field('square')?></span>
       <div class="project__post-location">
         <img src="<?php echo get_template_directory_uri()?>/images/icons/location.svg" alt="" class="project__post-icon">
         <span class="project__post-city"><?php the_field('city')?></span>

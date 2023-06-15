@@ -30,6 +30,17 @@
                 class="link"><?php the_field('phone', 'option');?></a></div>
             <div class="box-contact"><span class="title">Our e-mail</span> <a href="mailto:<?php the_field('email', 'option');?>"
                 class="link"><?php the_field('email', 'option');?></a></div>
+            <?php if( have_rows('social__block', 'option') ): ?>
+            <div class="box-social">
+            <?php while( have_rows('social__block', 'option') ): the_row(); ?>
+              <a href="<?php the_sub_field('social__link')?>" class="social__link">
+                <?php 
+                $image = get_sub_field('image');
+                echo wp_get_attachment_image( $image, 'full', false, ['class'=> 'social__img']);?>
+              </a>
+            <?php endwhile; ?>
+            </div>
+          <?php endif; ?>
           </div>
         </nav><button class="header__burger icon-menu"><span></span></button>
       </div>
