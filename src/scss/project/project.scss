@@ -78,6 +78,7 @@
   &__post-image {
     width: 50%;
     position: relative;
+    height: rem(400);
 
     &::after {
       content: "LEARN MORE";

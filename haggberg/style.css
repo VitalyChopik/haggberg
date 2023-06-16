@@ -2,3 +2,6 @@
  * Theme Name:  haggberg theme
 
  */
+.wpcf7 form .wpcf7-response-output {
+margin: 2em auto 1em !important;
+}

@@ -49,9 +49,9 @@ remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 
 //Отменяем srcset
-// add_filter('wp_calculate_image_srcset_meta', '__return_null' );
-// add_filter('wp_calculate_image_sizes', '__return_false', 99 );
-// remove_filter('the_content', 'wp_make_content_images_responsive' );
+add_filter('wp_calculate_image_srcset_meta', '__return_null' );
+add_filter('wp_calculate_image_sizes', '__return_false', 99 );
+remove_filter('the_content', 'wp_make_content_images_responsive' );
 
 //Отключаем Gutenberg
 // add_filter( 'use_block_editor_for_post_type', '__return_false', 100 );
@@ -65,8 +65,8 @@ remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 add_filter('xmlrpc_enabled', '__return_false');
 
 //Стили гутенберга
-// function gut_style_disable() {wp_dequeue_style( 'wp-block-library' );}
-// add_action( 'wp_enqueue_scripts', 'gut_style_disable', 100 );
+function gut_style_disable() {wp_dequeue_style( 'wp-block-library' );}
+add_action( 'wp_enqueue_scripts', 'gut_style_disable', 100 );
 
 //Отключить migrate
 function isa_remove_jquery_migrate( &$scripts ) {
@@ -76,18 +76,3 @@ $scripts->add( 'jquery', false, array( 'jquery-core' ), '1.12.4' );
 }
 }
 add_filter( 'wp_default_scripts', 'isa_remove_jquery_migrate' );
-
-// remove css js version
-add_filter( 'style_loader_src', 'remove_cssjs_ver', 10, 2 );
-add_filter( 'script_loader_src', 'remove_cssjs_ver', 10, 2 );
-function remove_cssjs_ver( $src ) {
-if( strpos($src,'?ver='))
-$src = remove_query_arg( 'ver', $src );
-return $src;
-}
-function remove_global_css() {
-  // Paste the code here
-remove_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' );
-remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
-}
-add_action('init', 'remove_global_css');
