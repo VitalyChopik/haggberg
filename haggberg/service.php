@@ -17,7 +17,7 @@ get_header();
               'post_type' => 'service',
               'posts_per_page' => -1,
               'orderby' => 'date',
-              'order' => 'DESC',
+              'order' => 'ASC',
 
             ] );
 
