@@ -26,7 +26,9 @@
     transition: all 0.5s;
 
     @include media(768) {
-      height: rem(211);
+      min-height: rem(211);
+      height: auto;
+      padding: rem(15);
     }
 
     &:hover .case__box-text {
@@ -69,7 +71,7 @@
     z-index: -1;
 
     @include media(768) {
-      margin-bottom: rem(71);
+      margin-bottom: rem(0);
     }
 
     h2 {
