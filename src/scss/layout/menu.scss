@@ -4,6 +4,7 @@
   @include media(991) {
     flex-direction: column;
     text-align: right;
+    gap: rem(15);
   }
 }
 
@@ -13,6 +14,7 @@
   @include media(991) {
     margin-left: auto;
     margin-bottom: rem(60);
+
   }
 }
 

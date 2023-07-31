@@ -5,7 +5,11 @@
     </div>
     <div class="case__box-text">
       <h2><?php the_title();?></h2>
-      <span><?php echo get_the_excerpt();?></span>
+      <span><?php
+      if(get_the_excerpt()){
+        echo get_the_excerpt();
+      }
+      ?></span>
     </div>
   </a>
 </article>

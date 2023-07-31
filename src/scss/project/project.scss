@@ -3,7 +3,7 @@
     padding: rem(80) 0 rem(100);
 
     @include media(991) {
-      padding: rem(40) 0 0;
+      padding: rem(40) 0;
     }
   }
 
@@ -36,7 +36,7 @@
     @include media(991) {
       width: 100%;
       padding: rem(40) rem(20);
-      height: rem(195);
+      height: auto;
       order: 1 !important;
     }
   }
