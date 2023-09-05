@@ -11,7 +11,7 @@
 ?>
 <div class="service__section">
   <div class="service__container">
-    <h1 class="page__title service__title"><?php the_title();?></h1>
+    <h1 class="page__title service__title"><?php the_field('title');?></h1>
     <div class="service__block">
       <div class="service__tab-navigation">
         <ul class="service__tab-list">
@@ -22,7 +22,6 @@
               'posts_per_page' => -1,
               'orderby' => 'date',
               'order' => 'ASC',
-
             ] );
 
             if ( $query->have_posts() ) {
@@ -70,7 +69,6 @@
             } 
             wp_reset_postdata(); // Сбрасываем $post
           ?>
-
       </div>
     </div>
   </div>
