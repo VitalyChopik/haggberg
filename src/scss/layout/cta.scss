@@ -8,6 +8,11 @@
     }
   }
 
+  &__container {
+    .about__container & {
+      padding: 0;
+    }
+  }
 
   &__block {
     display: flex;

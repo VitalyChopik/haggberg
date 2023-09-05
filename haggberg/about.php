@@ -10,7 +10,6 @@ get_header();
     <h1 class="page__title about__title"><?php the_title();?></h1>
   </div>
 </div>
-<?php echo get_template_part( 'template-parts/content', 'cta', ['class'=>'about__cta']); ?>
 <div class="about__section page__content">
   <div class="about__container">
     <?php the_content();?>
