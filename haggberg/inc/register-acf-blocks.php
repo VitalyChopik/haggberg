@@ -51,7 +51,13 @@ function my_register_blocks() {
             'title'             => __('Service Section'),
             'render_callback'   => 'my_acf_block_render_callback',
             'category'          => 'layout',
-            ));   
+            )); 
+        acf_register_block_type(array(
+            'name'            => 'form',
+            'title'             => __('Form'),
+            'render_callback'   => 'my_acf_block_render_callback',
+            'category'          => 'layout',
+            ));    
     }
 }
 
