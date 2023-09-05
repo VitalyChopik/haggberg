@@ -14,14 +14,14 @@
     <div class="case__section">
       <div class="case__container">
         <?php
-        if(get_field('show_title')){
+        if(get_sub_field('show_title')){
           ?>
-          <h1 class="page__title case__title"><?php the_field('title');?></h1>
+          <h1 class="page__title case__title"><?php the_sub_field('title');?></h1>
           <?php
         }
         ?>
         <?php
-        $postIN = get_field('selected_portfolio');
+        $postIN = get_sub_field('selected_portfolio');
         ?>
         <?php		
           global $post;

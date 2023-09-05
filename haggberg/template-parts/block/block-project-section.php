@@ -13,7 +13,7 @@
   <?php while( have_rows('project__section') ): the_row();?>
     <div class="project__section">
       <div class="project__container">
-        <h1 class="page__title project__title"><?php the_field('title');?></h1>
+        <h1 class="page__title project__title"><?php the_sub_field('title');?></h1>
         <?php		
             global $post;
             $query = new WP_Query( [

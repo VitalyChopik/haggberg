@@ -13,7 +13,7 @@
   <?php while( have_rows('contact__section') ): the_row();?>
     <div class="contact__section">
       <div class="contact__container">
-        <h1 class="page__title contact__title"><?php the_field('title');?></h1>
+        <h1 class="page__title contact__title"><?php the_sub_field('title');?></h1>
         <div class="contact__info">
           <div class="contact__info-box">
             <div class="contact__info-title">Our phone number</div><a href="tel:<?php the_field('phone', 'option');?>"
