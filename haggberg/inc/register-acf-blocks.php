@@ -23,12 +23,6 @@ function my_register_blocks() {
             'category'          => 'layout',
             ));
         acf_register_block_type(array(
-            'name'            => 'about',
-            'title'             => __('About'),
-            'render_callback'   => 'my_acf_block_render_callback',
-            'category'          => 'layout',
-            ));
-        acf_register_block_type(array(
             'name'            => 'contact-section',
             'title'             => __('Contact Section'),
             'render_callback'   => 'my_acf_block_render_callback',
@@ -57,7 +51,13 @@ function my_register_blocks() {
             'title'             => __('Form'),
             'render_callback'   => 'my_acf_block_render_callback',
             'category'          => 'layout',
-            ));    
+            ));   
+        acf_register_block_type(array(
+            'name'            => 'project-section',
+            'title'             => __('Project Section'),
+            'render_callback'   => 'my_acf_block_render_callback',
+            'category'          => 'layout',
+            )); 
     }
 }
 
