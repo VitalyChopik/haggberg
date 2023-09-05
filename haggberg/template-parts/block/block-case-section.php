@@ -12,7 +12,13 @@
 
 <div class="case__section">
   <div class="case__container">
-    <h1 class="page__title case__title"><?php the_field('title');?></h1>
+    <?php
+    if(get_field('show_title')){
+      ?>
+      <h1 class="page__title case__title"><?php the_field('title');?></h1>
+      <?php
+    }
+    ?>
     <?php
     $postIN = get_field('selected_portfolio');
     ?>
