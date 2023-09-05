@@ -65,8 +65,8 @@ function my_acf_block_render_callback( $block )
 {
 	$name = str_replace( 'acf/', '', $block['name'] );
 
-	if ( file_exists( get_theme_file_path( "/template-parts/block-{$name}.php" ) ) ) {
-		include( get_theme_file_path( "/template-parts/block-{$name}.php" ) );
+	if ( file_exists( get_theme_file_path( "/template-parts/block/block-{$name}.php" ) ) ) {
+		include( get_theme_file_path( "/template-parts/block/block-{$name}.php" ) );
 	}
 }
 
