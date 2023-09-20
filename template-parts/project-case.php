@@ -6,7 +6,7 @@
   <?php
     // <div class="project__post-data">
     //   <div class="project__post-location">
-    //     <img src="echo get_template_directory_uri()/images/icons/location.svg" alt="" class="project__post-icon">
+    //     <img src="echo get_template_directory_uri()/dist/images/icons/location.svg" alt="" class="project__post-icon">
     //     <span class="project__post-city"> the_field('city')</span>
     //   </div>
     // </div>
