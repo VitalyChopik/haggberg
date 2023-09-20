@@ -30,7 +30,7 @@
         <?php		
           global $post;
           $query = new WP_Query( [
-            'post_type' => ['post','page', 'tjänster'],
+            'post_type' => ['post','page', 'service'],
             'posts_per_page' => -1,
             'orderby' => 'post__in',
             'order' => 'ASC',

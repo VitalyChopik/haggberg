@@ -37,7 +37,7 @@ function cptui_register_my_cpts() {
 		"show_in_graphql" => false,
 	];
 
-	register_post_type( "tjänster", $args );
+	register_post_type( "service", $args );
 }
 
 add_action( 'init', 'cptui_register_my_cpts' );
