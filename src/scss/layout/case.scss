@@ -1,17 +1,25 @@
 .case {
 
   &__block {
-    margin: 0 rem(-15);
+    // margin: 0 rem(-15);
     display: flex;
     flex-wrap: wrap;
+    row-gap: rem(30);
+    column-gap: rem(15);
 
   }
 
   &__box {
-    width: 50%;
-    padding: 0 rem(15) rem(30);
+    width: calc(50% - 7.5px);
+    // padding: 0 rem(15) rem(30);
+    display: flex;
+    flex-direction: column;
 
     @include media(768) {
+      width: 100%;
+    }
+
+    &.full-width {
       width: 100%;
     }
   }
