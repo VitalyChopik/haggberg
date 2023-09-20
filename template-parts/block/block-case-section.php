@@ -16,35 +16,48 @@
         <?php
         if(get_sub_field('show_title')){
           ?>
-          <h1 class="page__title case__title"><?php the_sub_field('title');?></h1>
+          <div class="page__title case__title">
+            <?php the_sub_field('title');?>
+          </div>
           <?php
         }
         ?>
         <?php
         $postIN = get_sub_field('selected_portfolio');
+        $custom_case = get_sub_field('custom_case_btn');
+        $case_title_tag = get_sub_field('case_title_tag');
         ?>
         <?php		
           global $post;
           $query = new WP_Query( [
-            'post_type' => 'post',
-            'posts_per_page' => 4,
+            'post_type' => ['post','page', 'tjänster'],
+            'posts_per_page' => -1,
             'orderby' => 'post__in',
             'order' => 'ASC',
             'post__in' => $postIN
           ] );
 
-          if ( $query->have_posts() ) {
+          if ( $query->have_posts() || $custom_case) {
             ?>
             <div class="case__block">
               <?php
-              while ( $query->have_posts() ) {
-                $query->the_post();
-                echo get_template_part( 'template-parts/case'); 
+              if ( $query->have_posts() ) {
+                while ( $query->have_posts() ) {
+                  $query->the_post();
+                  echo get_template_part( 'template-parts/case', '', ['title-tag'=>$case_title_tag]); 
+                }
+              }
+              if($custom_case){
+                if( have_rows('custom_case') ): 
+                  while( have_rows('custom_case') ): the_row();
+                    echo get_template_part( 'template-parts/case', '', ['button'=>$custom_case,'title-tag'=>$case_title_tag]); 
+                  endwhile; 
+                endif; 
               }
               ?>
             </div>
             <?php
-          } 
+          }
           wp_reset_postdata(); // Сбрасываем $post
         ?>
       </div>
