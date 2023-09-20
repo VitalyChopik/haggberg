@@ -26,9 +26,9 @@
             ] );
             ?>
           <div class="box-about header__menu-about">
-            <div class="box-contact"><span class="title">Our phone number</span> <a href="tel:<?php the_field('phone', 'option');?>"
+            <div class="box-contact"><span class="title"><?= __('Telefonnummer')?></span> <a href="tel:<?php the_field('phone', 'option');?>"
                 class="link"><?php the_field('phone', 'option');?></a></div>
-            <div class="box-contact"><span class="title">Our e-mail</span> <a href="mailto:<?php the_field('email', 'option');?>"
+            <div class="box-contact"><span class="title"><?= __('E-postadress')?></span> <a href="mailto:<?php the_field('email', 'option');?>"
                 class="link"><?php the_field('email', 'option');?></a></div>
             <?php if( have_rows('social__block', 'option') ): ?>
             <div class="box-social">

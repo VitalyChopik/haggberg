@@ -31,7 +31,7 @@
                 while ( $query->have_posts() ) {
                   $projectNumber++;
                   $query->the_post();
-                  echo get_template_part( 'template-parts/project-case'); 
+                  echo get_template_part( 'template-parts/project-case', '', ['count'=>$projectNumber]); 
                 }
                 ?>
               </div>

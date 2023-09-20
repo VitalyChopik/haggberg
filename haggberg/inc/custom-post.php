@@ -6,12 +6,12 @@ function cptui_register_my_cpts() {
 	 */
 
 	$labels = [
-		"name" => esc_html__( "service", "custom-post-type-ui" ),
-		"singular_name" => esc_html__( "service", "custom-post-type-ui" ),
+		"name" => esc_html__( "Tjänster", "custom-post-type-ui" ),
+		"singular_name" => esc_html__( "Tjänst", "custom-post-type-ui" ),
 	];
 
 	$args = [
-		"label" => esc_html__( "service", "custom-post-type-ui" ),
+		"label" => esc_html__( "Tjänster", "custom-post-type-ui" ),
 		"labels" => $labels,
 		"description" => "",
 		"public" => true,
@@ -30,14 +30,14 @@ function cptui_register_my_cpts() {
 		"map_meta_cap" => true,
 		"hierarchical" => false,
 		"can_export" => false,
-		"rewrite" => [ "slug" => "service", "with_front" => true ],
+		"rewrite" => [ "slug" => "tjänster", "with_front" => true ],
 		"query_var" => true,
 		"menu_icon" => "dashicons-admin-tools",
 		"supports" => [ "title", "editor", "thumbnail", "excerpt", "custom-fields" ],
 		"show_in_graphql" => false,
 	];
 
-	register_post_type( "service", $args );
+	register_post_type( "tjänster", $args );
 }
 
 add_action( 'init', 'cptui_register_my_cpts' );
