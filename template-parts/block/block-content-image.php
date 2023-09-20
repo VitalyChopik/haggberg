@@ -10,6 +10,7 @@
  */
 ?>
 <?php if( have_rows('block__img') ): ?>
+  <?php if(!is_single()){ ?><div class="page__content block__img__container"><?php } ?>
   <?php while( have_rows('block__img') ): the_row();?>
     <div class="block__img">
       <?php if( have_rows('content__image') ): ?>
@@ -21,4 +22,5 @@
       <?php endif; ?>
     </div>
   <?php endwhile; ?>
+  <?php if(!is_single()){ ?></div><?php } ?>
 <?php endif; ?>
