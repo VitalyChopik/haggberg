@@ -10,16 +10,8 @@
  */
 ?>
 <?php if( have_rows('cta_section') ): ?>
-  <?php while( have_rows('cta_section') ): the_row(); 
-  $block_class = get_sub_field('block_class');
-
-  if ($block_class === 'none') {
-    $class = ''; 
-  } else {
-      $class = $block_class;
-  }
-  ?>
-  <div class="<?php echo $class; ?> cta__section">
+  <?php while( have_rows('cta_section') ): the_row(); ?>
+  <div class="cta__section">
     <div class="cta__container">
       <div class="cta__block">
         <div class="cta__block-bg">
