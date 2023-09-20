@@ -10,6 +10,7 @@
  */
 ?>
 <?php if( have_rows('reviews__slider') ): ?>
+  <?php if(!is_single()){ ?><div class="page__content reviews__slider__container"><?php } ?>
   <?php while( have_rows('reviews__slider') ): the_row();?>
     <div class="reviews__slider">
       <div class="reviews__wrapper swiper-wrapper">
@@ -63,4 +64,5 @@
       }?>
     </div>
   <?php endwhile; ?>
+  <?php if(!is_single()){ ?></div><?php } ?>
 <?php endif; ?>
