@@ -86,8 +86,16 @@
     justify-content: space-between;
     background: $whiteColor;
     border: 1px #505050 solid;
-    margin-right: -1px;
     margin-bottom: -1px;
+    flex-grow: 1;
+
+    &:nth-child(even) {
+      margin-left: -1px;
+
+      @include media(991) {
+        margin-left: 0;
+      }
+    }
 
     @include media(991) {
       background: none;
@@ -103,7 +111,6 @@
 
     &:hover {
       background: none;
-      border: none;
     }
 
     &:hover .services__img {

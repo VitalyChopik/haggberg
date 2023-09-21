@@ -2,7 +2,6 @@
   $custom_case = $args['button'];
   $case_title_tag = $args['title-tag'];
   if(!$custom_case){
-    echo'1';
     ?>
     
     <article class="project__post">
