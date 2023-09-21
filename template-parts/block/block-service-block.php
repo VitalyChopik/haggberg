@@ -15,8 +15,7 @@
   <div class="services__section">
     <div class="services__container">
       <div class="services__block-text">
-        <h2 class="page__title services__title"><?php the_sub_field('title')?></h2>
-        <div class="services__text"><?php the_sub_field('text')?></div>
+        <div class="page__title services__title"><?php the_sub_field('title')?></div>
       </div>
       <div class="services__block">
       <?php		
