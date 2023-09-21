@@ -13,7 +13,7 @@
   <?php while( have_rows('contact__form') ): the_row();?>
     <div class="contact__section form">
       <div class="contact__container">
-        <h1 class="page__title contact__form-title"><?php the_sub_field('title_form');?></h1>
+        <div class="page__title contact__form-title"><?php the_sub_field('title_form');?></div>
         <?php
         $form_id = get_sub_field('form_id');
         if ($form_id) {

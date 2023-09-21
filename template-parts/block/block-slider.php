@@ -23,8 +23,9 @@
               echo wp_get_attachment_image( $image, 'full'); ?>
             </div>
             <div class="reviews__slide-text">
-              <h3 class="page__title reviews__slide-title"><?php the_sub_field('title');?></h3>
-              <span class="reviews__slide-review"><?php the_sub_field('review');?></span>
+              <div class="reviews__slide-content">
+                <?php the_sub_field('review_content'); ?>
+              </div>
               <div class="reviews__slide-rating">
                 <?php 
                 $score = get_sub_field('score');
