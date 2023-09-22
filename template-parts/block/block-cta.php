@@ -9,9 +9,14 @@
  * @param   (int|string) $post_id The post ID this block is saved to.
  */
 ?>
+ <?php if(is_page('about')){ 
+$className = 'about__cta';
+ }else {
+  $className = '';
+ } ?>
 <?php if( have_rows('cta_section') ): ?>
   <?php while( have_rows('cta_section') ): the_row(); ?>
-  <div class="cta__section">
+  <div class="cta__section <?php echo $className;?>">
     <div class="cta__container">
       <div class="cta__block">
         <div class="cta__block-bg">
