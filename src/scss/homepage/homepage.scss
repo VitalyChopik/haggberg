@@ -30,6 +30,7 @@
   &__container {
     display: flex;
     justify-content: space-between;
+    align-items: start;
 
     @include media(991) {
       flex-direction: column;

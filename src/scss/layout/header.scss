@@ -60,6 +60,49 @@
     .menu__item {
       position: relative;
       margin-bottom: 0;
+
+      .sub-menu {
+        display: none;
+
+        .menu__link {
+          position: static;
+
+          @include media(992) {
+            white-space: break-spaces;
+            font-size: rem(16);
+            line-height: rem(24);
+          }
+
+          &:hover {
+            letter-spacing: 0;
+          }
+        }
+      }
+
+      &:hover {
+        .sub-menu {
+          display: flex;
+          flex-direction: column;
+          gap: rem(20);
+          position: absolute;
+          top: 100%;
+          right: rem(-20);
+          background: #333333;
+          padding-top: 60px;
+          padding: 20px;
+          width: max-content;
+
+          @include media(992) {
+            position: relative;
+            right: 0;
+            top: 0;
+            padding: 0;
+            padding-top: rem(10);
+            gap: rem(10);
+            width: 100%;
+          }
+        }
+      }
     }
 
     .menu__link {

@@ -64,6 +64,7 @@
       line-height: 122.2%;
       letter-spacing: 0.075em;
       margin-bottom: rem(40);
+      word-wrap: break-word;
 
       @include media(991) {
         font-size: 28px;

@@ -48,3 +48,8 @@
     }
   }
 }
+
+.about__container [class*="__container"] {
+  /* Убираем padding у всех дочерних элементов с классом, оканчивающимся на "__container" */
+  padding: 0;
+}
