@@ -1,17 +1,23 @@
 .case {
 
   &__block {
-    margin: 0 rem(-15);
+    // margin: 0 rem(-15);
     display: flex;
     flex-wrap: wrap;
+    gap: rem(30);
 
   }
 
   &__box {
-    width: 50%;
-    padding: 0 rem(15) rem(30);
+    width: calc(50% - 15px);
+    display: flex;
+    flex-direction: column;
 
     @include media(768) {
+      width: 100%;
+    }
+
+    &.full-width {
       width: 100%;
     }
   }
@@ -74,7 +80,11 @@
       margin-bottom: rem(0);
     }
 
-    h2 {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       margin-bottom: rem(8);
       color: $whiteColor;
       font-weight: 300;
@@ -88,7 +98,8 @@
       }
     }
 
-    span {
+    span,
+    p {
       color: $whiteColor;
       line-height: 140%;
       letter-spacing: 0.02em;

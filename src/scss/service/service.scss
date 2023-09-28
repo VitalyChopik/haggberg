@@ -50,6 +50,7 @@
       }
     }
 
+
     @include media(991) {
       width: 100%;
       display: none;
@@ -60,6 +61,36 @@
     }
 
     &.active {
+      a {
+        color: #FFFFFF;
+      }
+
+      background: $grayColor;
+
+      @include media(991) {
+        display: flex;
+        order: 1;
+
+        &::after {
+          content: "";
+          border-bottom: 3.5px solid #ffffff;
+          border-right: 3.5px solid #ffffff;
+          height: 17px;
+          width: 17px;
+          transform: rotate(45deg) translate3d(-50%, 0%, 0);
+          transition: all 0.3s;
+        }
+
+        .active & {
+          &::after {
+            transition: all 0.3s;
+            transform: rotate(-135deg) translate3d(25%, -25%, 0);
+          }
+        }
+      }
+    }
+
+    &:hover {
       a {
         color: #FFFFFF;
       }

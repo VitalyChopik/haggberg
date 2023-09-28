@@ -11,6 +11,27 @@
     @include media(991) {
       font-size: 28px;
     }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: inherit;
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      text-align: inherit;
+      letter-spacing: inherit;
+    }
+
+    p {
+      font-size: rem(18);
+      font-weight: 400;
+      line-height: 140%;
+      letter-spacing: 0.02em;
+    }
   }
 
   &__content {

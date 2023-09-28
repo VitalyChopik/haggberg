@@ -88,26 +88,35 @@
     }
   }
 
-  &__slide-title {
-    font-weight: 300;
-    margin-bottom: rem(40);
+  &__slide-content {
 
-    @include media(991) {
-      margin-bottom: rem(20);
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 300;
+      margin-bottom: rem(40);
+
+      @include media(991) {
+        margin-bottom: rem(20);
+      }
+    }
+
+    p {
+      max-width: rem(380);
+      line-height: 140%;
+      letter-spacing: 0.02em;
+      color: #1F1F1F;
+      margin-bottom: rem(40);
+
+      @include media(991) {
+        margin-bottom: rem(20);
+      }
     }
   }
 
-  &__slide-review {
-    max-width: rem(380);
-    line-height: 140%;
-    letter-spacing: 0.02em;
-    color: #1F1F1F;
-    margin-bottom: rem(40);
-
-    @include media(991) {
-      margin-bottom: rem(20);
-    }
-  }
 
   &__slide-name {
     font-weight: 300;

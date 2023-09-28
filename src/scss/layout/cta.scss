@@ -8,6 +8,11 @@
     }
   }
 
+  &__container {
+    .about__container & {
+      padding: 0;
+    }
+  }
 
   &__block {
     display: flex;
@@ -38,6 +43,42 @@
     height: 100%;
     object-fit: cover;
     object-position: center center;
+  }
+
+  &__block-text {
+    p {
+      max-width: rem(350);
+      width: 100%;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.075em;
+      color: #FFFFFF;
+      margin-bottom: rem(40);
+
+      @include media(991) {
+        margin-bottom: rem(20);
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 500;
+      font-size: rem(52);
+      line-height: 122.2%;
+      letter-spacing: 0.075em;
+      color: #FFFFFF;
+      margin-bottom: rem(40);
+
+      @include media(991) {
+        font-size: rem(44);
+        margin-bottom: rem(20);
+      }
+    }
   }
 
   &__text {

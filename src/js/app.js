@@ -6,6 +6,7 @@
 
 Если мы хотим добавить модуль следует его расскоментировать
 */
+import caseFunc from './components/caseFunc'
 import {
   isWebp,
   headerFixed,
@@ -72,7 +73,12 @@ window.addEventListener('DOMContentLoaded', () => {
     tabsList = document.querySelector('.service__tab-list'),
     tabItem = document.querySelectorAll('.service__tab-item'),
     navItem = document.querySelectorAll('.header__menu .menu__list .menu__item'),
-    tabsContentBlock = document.querySelectorAll('.service__tab-content');
+    tabsContentBlock = document.querySelectorAll('.service__tab-content'),
+    caseBlocks = document.querySelectorAll('.case__block');
+
+  if (caseBlocks.length > 0) {
+    caseFunc(caseBlocks);
+  }
 
   function squareBlock(element) {
     element.forEach(item => {
