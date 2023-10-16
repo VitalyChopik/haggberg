@@ -174,3 +174,9 @@
     }
   }
 }
+
+.services__section .services__title {
+  h2 {
+    @include adaptiveClamp(font-size, 52, 28, 1920, 991);
+  }
+}

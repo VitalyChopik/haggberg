@@ -7,6 +7,8 @@ require get_template_directory() . '/inc/ajax-script.php';
 require get_template_directory() . '/inc/register-acf-blocks.php';
 require get_template_directory() . '/inc/custom-post.php';
 require get_template_directory() . '/inc/clear-sctipt.php';
+// require get_template_directory() . '/inc/custom_script/custom_script.php';
+// require get_template_directory() . '/inc/custom_shortcodes';
 // require get_template_directory() . '/inc/clear-header.php';
 add_filter('show_admin_bar', '__return_false');
 //Поддержка SVG

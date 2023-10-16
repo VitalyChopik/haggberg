@@ -1,0 +1,40 @@
+.schema-faq-section {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #333;
+
+  // &.active {
+  //   gap: 20px;
+  // }
+
+
+  .schema-faq-answer {
+    margin: 0;
+  }
+}
+
+.schema-faq-question {
+  padding: rem(10);
+  background: #fff;
+  color: #333;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size: rem(20);
+
+  &:hover {
+    background: #333;
+    color: #fff;
+  }
+}
+
+.schema-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+  padding: 0 rem(10);
+
+  .active & {
+    max-height: rem(1000);
+    padding: rem(10);
+  }
+}

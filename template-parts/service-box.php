@@ -1,7 +1,7 @@
 <?php
   $service_title_tag = get_sub_field('service_title_tag');
     ?>
-    <a href="<?php echo home_url('/our-services');?>/#<?php $itemSlug = get_post(); echo $itemSlug->post_name;?>" class="services__box">
+    <a href="<?php echo home_url('/tjanster');?>/#<?php $itemSlug = get_post(); echo $itemSlug->post_name;?>" class="services__box">
       <div class="services__box-bg">
         <?php the_post_thumbnail('full', ['class' => "services__img"])?>
       </div>

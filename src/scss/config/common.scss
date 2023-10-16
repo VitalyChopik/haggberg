@@ -8,6 +8,7 @@
     text-align: center;
     letter-spacing: 0.075em;
 
+
     @include media(991) {
       font-size: 28px;
     }
@@ -64,7 +65,8 @@
       line-height: 122.2%;
       letter-spacing: 0.075em;
       margin-bottom: rem(40);
-      word-wrap: break-word;
+      // word-wrap: break-word;
+      // @include adaptiveClamp(font-size, 52, 28, 1920, 991);
 
       @include media(991) {
         font-size: 28px;
@@ -81,12 +83,16 @@
     h6 {}
 
     p {
-      max-width: 790px;
+      max-width: 100%;
       font-weight: 500;
       font-size: rem(20);
       line-height: 140%;
       color: #1F1F1F;
       margin: rem(64) 0;
+
+      .full-width {
+        max-width: 100%;
+      }
 
       strong {
         color: inherit;

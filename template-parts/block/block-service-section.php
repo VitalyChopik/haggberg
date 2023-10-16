@@ -86,7 +86,15 @@ if( have_rows('service__section') ): ?>
                         <?php the_post_thumbnail('full')?>
                       </div>
                       <div class="service__tab-text">
-                        <?php the_content();?>
+                        <?php
+                        $post_id = get_the_ID();
+                        if(get_field('excerpt_text', $post_id)){
+                          the_field('excerpt_text', $post_id); 
+                        }else {
+                          the_content();
+                        }
+                        ?>
+                        <a href="<?php the_permalink(); ?>" class="service__permalink">Läs mer</a>
                       </div>
                     </div>
                     <?php
