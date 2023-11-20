@@ -37,13 +37,18 @@
 
       p {
         margin-top: 0;
-        margin-bottom: rem(80);
+        margin-bottom: rem(20);
         font-size: rem(16);
         font-weight: 400;
 
-        @include media(991) {
-          margin-bottom: rem(40);
-        }
+        // @include media(991) {
+        //   margin-bottom: rem(20);
+        // }
+      }
+
+      li {
+        font-size: rem(16);
+        font-weight: 400;
       }
     }
   }
