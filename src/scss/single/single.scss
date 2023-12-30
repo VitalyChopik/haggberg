@@ -1,9 +1,11 @@
 .single {
   &__section {
     padding-top: rem(80);
+    padding-bottom: rem(80);
 
     @include media(991) {
       padding-top: rem(40);
+      padding-bottom: rem(40);
     }
   }
 
@@ -21,6 +23,7 @@
     max-height: 370px;
     object-fit: cover;
     object-position: center center;
+    margin-bottom: rem(64);
 
     @include media(768) {
       height: rem(200);
